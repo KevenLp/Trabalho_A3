@@ -4,9 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keven Pereira</title>
+    <title>Keven Pereira - Perfil Acadêmico</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
     <link rel="stylesheet" href="index.css">
-    <link rel="js" href="index.js">
+
+
 </head>
 <div class="conteiner">
 
@@ -18,45 +24,61 @@
             <table>
                 <tr>
                     <td>
-                        <h1> Keven Leal Pereira</h1>
+                        <h3> Keven Leal Pereira</h3>
                         <H2> Ra:124113271</H2>
                         <h3> Kevenlealpereira@gmail.com</h3>
                         <h3>(31) 9 8366-0953</h3>
 
                     </td>
                     <td style="text-align: right;">
-                        <h1> Análise e Desenvolvimento de Sistemas</h1>
-                        <H2> Período: 3º (Terceiro) - 2025</H2> 
+                        <h3> Análise e Desenvolvimento de Sistemas</h3>
+                        <h4> Período: 3º (Terceiro) - 2025</h4>
                         <table class="tabela-uc">
-                            <th style="text-align: center;column-span: all;">
-                                Unidades Curriculares
-                            </th>
-                            <tr>
-                                <td style="font-weight: bold;">Curso</td>
-                                <td style="font-weight: bold;">Carga</td>
-                                <td style="font-weight: bold;">Conclusão</td>
-                            </tr>
-                            <tr>
-                                <td>Sistemas computacionais e segurança</td>
-                                <td>160h</td>
-                                <td>24/12/2024</td>
-                            </tr>
-                             <tr>
-                                <td>Modelagem de software</td>
-                                <td>160h</td>
-                                <td>04/07/2024</td>
-                            </tr>
-                             <tr>
-                                <td>Programação de soluções computacionais</td>
-                                <td>160h</td>
-                                <td>04/07/2024</td>
-                            </tr>
-                             <tr>
-                                <td>Ambientes computacionais e conectividade</td>
-                                <td>160h</td>
-                                <td>24/12/2024</td>
-                            </tr>
-                        </table>                   
+                            <thead>
+                                <th style="text-align: center;column-span: all;">
+                                    Unidades Curriculares
+                                </th>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td style="font-weight: bold;">Curso</td>
+                                    <td style="font-weight: bold;">Carga</td>
+                                    <td style="font-weight: bold;">Conclusão</td>
+                                </tr>
+                                <tr>
+                                    <td>Sistemas computacionais e segurança</td>
+                                    <td>160h</td>
+                                    <td>24/12/2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Modelagem de software</td>
+                                    <td>160h</td>
+                                    <td>04/07/2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Programação de soluções computacionais</td>
+                                    <td>160h</td>
+                                    <td>04/07/2024</td>
+                                </tr>
+                                <tr>
+                                    <td>Ambientes computacionais e conectividade</td>
+                                    <td>160h</td>
+                                    <td>24/12/2024</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3" style="text-align: center; padding: 10px;">
+                                        <button id="btnAbrirModal" class="btn btn-primary">
+                                            Nova U.C.
+                                        </button>
+                                        <!-- Container vazio onde o modal será injetado -->
+                                        <div id="modalContainer"></div>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
                     </td>
                 </tr>
                 <tr>
@@ -70,7 +92,7 @@
         </header>
         <main>
             <section>
-                <h3>Sobre mim</h3>
+                <h3><u>Sobre mim</u></h3>
                 <p style="text-align: justify; margin-right: 15px;">
                     Meu nome é Keven Leal Pereira, atualmente estou cursando Análise e Desenvolvimento de Sistemas.
                     Cresci em uma cidade do interior, onde passei boa parte da minha infância e adolescência. Aos 15
@@ -79,7 +101,7 @@
                 </p>
             </section>
             <section>
-                <h3>Perfil pessoal</h3>
+                <h3><u>Perfil pessoal</u></h3>
                 <p style="text-align: justify; margin-right: 15px;">
                     Sou cruzeirense e tenho uma paixão por esportes e entretenimento. Gosto de jogar futebol, basquete,
                     videogame e também praticar lutas. Tocar bateria é um dos meus hobbies favoritos, assim como
@@ -91,9 +113,12 @@
                 <h3><u>Perfil professional/acadêmico</u></h3>
                 <p style="text-align: justify; margin-right: 15px;">
                     Na faculdade, tenho um relacionamento positivo com meus colegas e professores.
-                    Tenho me empenhado para obter conhecimento afim de atuar profissionalmente como analista desenvolvedor.
-                    Atualmente ocupo a posicao de analsta de suporte I na empresa de minha família, cargo que desempenho há 
-                    aproximadamente um ano e meio, sendo esta minha primeira e única oportunidade profissional até o momento.
+                    Tenho me empenhado para obter conhecimento afim de atuar profissionalmente como analista
+                    desenvolvedor.
+                    Atualmente ocupo a posicao de analsta de suporte I na empresa de minha família, cargo que desempenho
+                    há
+                    aproximadamente um ano e meio, sendo esta minha primeira e única oportunidade profissional até o
+                    momento.
                 </p>
             </section>
         </main>
@@ -113,5 +138,8 @@
             </a>
         </footer>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="src/cadastroModalCtrl.js"></script>
 </body>
+
 </html>
