@@ -85,7 +85,6 @@ footer p{
   cursor: move;
 }
 
-
 .banner_top {
       width: 100%;
       height: 250px;
@@ -93,3 +92,11 @@ footer p{
       background-size: cover;
       background-position: center;
     }
+    
+.tabela-validacao{
+    width: 100%;
+    border: 2px solid black;
+    background-color: #50555cc4;
+    border-spacing: 5px;
+    text-align: center;
+}

@@ -81,6 +81,25 @@
                                 Salvar
                             </button>
                         </div>
+                        <table class="tabela-validacao">
+                            <caption>Validações</caption>
+                            <tr>
+                                <td>Email</td>
+                                <td>
+                                    <input type="text" id="campoEmail" placeholder="exemplo@email.com">
+                                    <button onclick="verificarEmail()">Validar</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>CPF</td>
+                                <td>
+                                    <input type="text" id="campoCPF" maxlength="14" oninput="mascararCPF(this)"
+                                        placeholder="000.000.000-00">
+                                    <button onclick="verificarCPF()">Validar</button>
+                                </td>
+                            </tr>
+                        </table>
+
                     </td>
                 </tr>
                 <tr>

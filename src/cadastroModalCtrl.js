@@ -6,8 +6,12 @@ function ativarEdicao() {
         return;
     }
 
+    var keven = 'Meu nome é keven Leal Pereira';
+
+    alert(keven);
+
     const linhas = tabela.querySelectorAll("tbody tr");
-    console.log("Linhas selecionadas para edição:", linhas.length);
+
 
     linhas.forEach((linha, index) => {
 
@@ -132,3 +136,54 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+
+function validarEmail(email) {
+  const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+}
+
+function verificarEmail() {
+  const email = document.getElementById("campoEmail").value;
+  if (validarEmail(email)) {
+    alert("E-mail válido!");
+  } else {
+    alert("E-mail inválido!");
+  }
+}
+
+function mascararCPF(input) {
+  let valor = input.value.replace(/\D/g, '');
+  if (valor.length > 11) valor = valor.slice(0, 11);
+
+  valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+  valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+  valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+  input.value = valor;
+}
+
+function validarCPF(cpf) {
+  cpf = cpf.replace(/[^\d]+/g, '');
+  if (cpf.length !== 11 || /^(\d)\1{10}$/.test(cpf)) return false;
+
+  let soma = 0;
+  for (let i = 0; i < 9; i++) soma += parseInt(cpf.charAt(i)) * (10 - i);
+  let resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  if (resto !== parseInt(cpf.charAt(9))) return false;
+
+  soma = 0;
+  for (let i = 0; i < 10; i++) soma += parseInt(cpf.charAt(i)) * (11 - i);
+  resto = (soma * 10) % 11;
+  if (resto === 10 || resto === 11) resto = 0;
+  return resto === parseInt(cpf.charAt(10));
+}
+
+function verificarCPF() {
+  const cpf = document.getElementById("campoCPF").value;
+  if (validarCPF(cpf)) {
+    alert("CPF válido!");
+  } else {
+    alert("CPF inválido!");
+  }
+}
