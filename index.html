@@ -33,19 +33,18 @@
                     <td style="text-align: right;">
                         <h3> Análise e Desenvolvimento de Sistemas</h3>
                         <h4> Período: 3º (Terceiro) - 2025</h4>
-                        <table class="tabela-uc">
+                        <table class="tabela-uc" id="tabela-uc">
+                            <caption class="header" style="text-align: center;column-span: all;">
+                                Unidades Curriculares
+                            </caption>
                             <thead>
-                                <th style="text-align: center;column-span: all;">
-                                    Unidades Curriculares
-                                </th>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td style="font-weight: bold;">Curso</td>
-                                    <td style="font-weight: bold;">Carga</td>
-                                    <td style="font-weight: bold;">Conclusão</td>
+                                <tr class="nao-editar">
+                                    <th style="font-weight: bold;">Curso</th>
+                                    <th style="font-weight: bold;">Carga</th>
+                                    <th style="font-weight: bold;">Conclusão</th>
                                 </tr>
+                            </thead>
+                            <tbody>
                                 <tr>
                                     <td>Sistemas computacionais e segurança</td>
                                     <td>160h</td>
@@ -68,17 +67,20 @@
                                 </tr>
                             </tbody>
                             <tfoot>
-                                <tr>
-                                    <td colspan="3" style="text-align: center; padding: 10px;">
-                                        <button id="btnAbrirModal" class="btn btn-primary">
-                                            Nova U.C.
-                                        </button>
-                                        <!-- Container vazio onde o modal será injetado -->
-                                        <div id="modalContainer"></div>
-                                    </td>
-                                </tr>
+
                             </tfoot>
                         </table>
+                        <div>
+                            <button id="editar" class="btn btn-primary" onclick="ativarEdicao()">
+                                Editar
+                            </button>
+                            <button id="criar" class="btn btn-primary" onclick="inserirLinha()">
+                                Inserir
+                            </button>
+                            <button id="salvar" class="btn btn-primary" onclick="salvarTabela()">
+                                Salvar
+                            </button>
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -138,8 +140,10 @@
             </a>
         </footer>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="src/cadastroModalCtrl.js"></script>
+<link>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+<script src="src/cadastroModalCtrl.js"></script>
+
 
 </html>
